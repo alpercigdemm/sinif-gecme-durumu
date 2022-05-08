@@ -1,1 +1,67 @@
-# sinif-gecme-durumu
+# Sınıf Geçme Durmu
+
+Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
+
+Geçme Notu : 55
+
+**ÖDEV**
+* Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+
+**CEVAP:**
+
+```
+import  java.util.Scanner;
+
+public class SinifGecmeDurumu {
+
+    public static void main(String[] args) {
+        int mat, fzk, kmy, msc, trk, total = 0;
+        double counter = 0;
+        Scanner inp = new Scanner(System.in);
+
+
+        System.out.print("Maths Enter Score :");
+        mat = inp.nextInt();
+        if (!(mat <= 0 || mat >= 100)) {
+            total += mat;
+            counter++;
+        }
+        System.out.print("Physics Enter Score :");
+        fzk = inp.nextInt();
+        if (!(fzk<= 0 || fzk >= 100)) {
+            total += fzk;
+            counter++;
+        }
+        System.out.print("Music Enter Score :");
+        msc = inp.nextInt();
+        if (!(msc <= 0 || msc >= 100)) {
+            total += msc;
+            counter++;
+        }
+        System.out.print("Chemical Enter Score :");
+        kmy = inp.nextInt();
+        if (!(kmy <= 0 || kmy >= 100)) {
+            total += kmy;
+            counter++;
+        }
+        System.out.print("Turkish Enter Score :");
+        trk = inp.nextInt();
+        if (!(trk <= 0 || trk >= 100)) {
+            total += trk;
+            counter++;
+        }
+
+        if (total/counter<55){
+            System.out.println("Sinifta kaldiniz ! ");
+        }else{
+            System.out.println("Sinifi gectiniz !");
+        }
+
+
+
+    }
+}
+
+
+```
+www.patika.dev
